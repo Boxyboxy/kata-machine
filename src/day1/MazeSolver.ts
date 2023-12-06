@@ -8,10 +8,7 @@ const dir = [
     [0,-1],
     [0,1]
 ]
-function walk (maze: string[], wall: string, curr: Point, end: Point, seen: boolean[][], path: Point[]): boolean { 
-
-    
-    
+function walk (maze: string[], wall: string, curr: Point, end: Point, seen: boolean[][], path: Point[]): boolean {    
     // 1. base case off the map
     if ( curr.x < 0 || curr.x >= maze[0].length || 
          curr.y < 0 || curr.y >= maze.length ){
@@ -20,7 +17,6 @@ function walk (maze: string[], wall: string, curr: Point, end: Point, seen: bool
 
     // 2. base case on a wall
     if(maze[curr.y][curr.x] === wall){
-     
         return false;
     }
     // 3. base case it's the end
